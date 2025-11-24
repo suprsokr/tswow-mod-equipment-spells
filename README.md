@@ -2,6 +2,12 @@
 
 A TSWoW module that automatically grants and removes spells granted by items when items are equipped/unequipped.
 
+## Features
+
+- Automatically learns/removes spells when equipping/unequipping items
+- Custom tooltips display "Learn: [Spell Name]" with spell descriptions
+- Works on all tooltip types (hover, chat links, item comparisons)
+
 ## How It Works
 
 Items with `ON_LEARN` spell triggers will automatically teach their spells when equipped and remove them when unequipped.
@@ -21,10 +27,14 @@ See [datascripts/items/cow-bone-mace.ts] for working example.
 
 ```
 datascripts/
-  items/cow-bone-mace.ts   # Example item and spell definitions.
+  items/cow-bone-mace.ts   # Example item and spell definitions
 livescripts/
-  livescripts.ts           # Core of the script that handles ON_LEARN item spells.
-  spells/marrow-strike.ts  # Optional, special spell functionality.
+  livescripts.ts           # Server-side: Handles ON_LEARN item spells
+  spells/marrow-strike.ts  # Ignore
+addon/
+  addon.ts                 # Custom tooltips showing learned spells
+shared/
+  Messages.ts              # Client-server communication packets
 ```
 
 ## Technical Details

@@ -17,7 +17,7 @@ import { logger } from "../logger" // This works. See build/ directory after com
 export const MARROW_STRIKE_SPELL = std.Spells
     .create('equipment-spells', 'marrow-strike', 120) // Cone of Cold base
     .Name.enGB.set('Marrow Strike')
-    .Description.enGB.set('Strikes enemies in a cone in front of you with bone weaponry. Has a 10% chance to stun affected targets.')
+    .Description.enGB.set('Strikes enemies in front of you. 10% chance to stun.')
     .Icon.setFullPath('Interface\\Icons\\inv_misc_bone_01')
     .Visual.modRefCopy((visual: any) => {
         visual.cloneFromSpell(1752); // Sinier Strike
@@ -78,7 +78,7 @@ logger.debug(`Bone Stun created (ID: ${BONE_STUN_SPELL.ID})`);
 export const COW_BONE_MACE = std.Items
     .create('equipment-spells', 'cow-bone-mace', 11411) // Large Bear Bone base
     .Name.enGB.set('Cow Bone')
-    .Description.enGB.set('Grants Marrow Strike, a fast, cleaving attack which can stun targets for 3 seconds.')
+    .Description.enGB.set('Udderly devastating.')
     .Quality.WHITE.set()
     .ItemLevel.set(1)
     .RequiredLevel.set(1)
