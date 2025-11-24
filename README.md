@@ -6,18 +6,16 @@ A TSWoW module that automatically grants and removes spells granted by items whe
 
 Items with `ON_LEARN` spell triggers will automatically teach their spells when equipped and remove them when unequipped.
 
-## Step 1 - Datascripts - Associate item with a spell with type ON_LEARN
+Just add the following to any item:
 
 ```
 .Spells.addMod(spell => {
-    spell.Spell.set(MARROW_STRIKE_SPELL.ID)
+    spell.Spell.set(<your spell id>)
         .Trigger.ON_LEARN.set()
 })
 ```
 
 See [datascripts/items/cow-bone-mace.ts] for working example.
-
-Step 2 - Thats it!
 
 ## Structure
 
