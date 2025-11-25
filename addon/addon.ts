@@ -58,9 +58,6 @@ function addSpellInfoToTooltip(tooltip: any, itemID: number) {
     const spellIDs = equipmentSpellItems.get(itemID);
     
     if (spellIDs && spellIDs.length > 0) {
-        // Add a blank line for spacing
-        tooltip.AddLine(" ");
-        
         // Add each spell with name and description
         for (const spellID of spellIDs) {
             // GetSpellInfo returns multiple values
